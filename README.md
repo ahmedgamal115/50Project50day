@@ -30,10 +30,10 @@ Before you get started, make sure you have the following tools installed on your
 
 1. Clone this repository to your local machine using the following command:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/ahmedgamal115/50Project50day.git
 2. Change your working directory to the project folder:
    ```
-   cd your-repo
+   cd 50Project50day
 3. Install the necessary Node.js packages for projects 46 and 49:
    ```
    npm install
