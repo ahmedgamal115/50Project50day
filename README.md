@@ -21,7 +21,7 @@ Projects 1 to 45 can be opened using a live server, while projects 46 and 49 req
 
 Before you get started, make sure you have the following tools installed on your machine:
 
-- Node.js (for running the Express server)
+- Node.js (for running the Express server) [https://nodejs.org/en/download]
 - npm (Node Package Manager, included with Node.js)
 - Visual Studio Code or any code editor of your choice
 - Live Server extension for your code editor
