@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.btn{
+  position: relative;
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgb(118, 0, 142);
+  border: none;
+  color: aliceblue;
+  overflow: hidden;
+}
+.btn:focus{
+  outline: none;
+}
+.cit{
+  position: absolute;
+  top: 614px;
+  left: -469px;
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}

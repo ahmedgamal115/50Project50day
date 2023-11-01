@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+}
+.slide{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.slide.left{
+    left: 0;
+    background-image: url('https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBzNXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide.right{
+    right: 0;
+    background-image: url('https://images.unsplash.com/photo-1621259182978-fbf93132d53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8WEJveCUyMFNlcmllcyUyMFh8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 11, 201, 0.438);
+    z-index: 2;
+}
+.slide.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.51);
+    z-index: 2;
+}
+.slide.left,
+.slide.right,
+.slide.left::before,
+.slide.right::before{
+    transition: all 1000ms ease-in-out;
+}
+.link{
+    width: 300px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 5px solid aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-70%); */
+    z-index: 6;
+}
+h1{
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: 700;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    white-space: nowrap;
+    z-index: 6;
+}
+.link a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.link:hover{
+    background-color: rgb(99, 99, 233);
+    border-color: rgb(99, 99, 233);
+}
+
+.hover-left .left{
+    width: 75%;
+}
+.hover-left .right{
+    width: 25%;
+}
+.hover-right .right{
+    width: 75%;
+}
+.hover-right .left{
+    width: 25%;
+}

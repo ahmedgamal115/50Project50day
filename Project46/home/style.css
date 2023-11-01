@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+  padding: 15px;
+}
+.container h2{
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+.container .hint{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(121, 121, 121);
+  margin-left: 70px;
+}
+.content{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  row-gap: 40px;
+  position: relative;
+}
+.categories{
+  position: relative;
+  width: 100%;
+  min-height: 45%;
+  max-height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.category{
+  position: relative;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.category.active{
+  border: 5px solid blue;
+  border-radius: 10px;
+}
+.category .image{
+  position: relative;
+  overflow: hidden;
+}
+.category img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.category.active .image::before{
+  background: linear-gradient(rgba(0, 0, 0, 0.392),rgba(8, 0, 85, 0.779));
+}
+.category .image::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.779));
+}
+.category .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 40px;
+  font-weight: 600;
+  color: aliceblue;
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+  margin-right: 70px;
+}
+.info .select{
+  font-size: 18px;
+  font-weight: 700;
+}
+.info .select span{
+  color: blue;
+}
+.info .btn button{
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(17, 107, 203);
+  color: aliceblue;
+  font-weight: 600;
+  cursor: pointer;
+}
+.info .btn button:active{
+  background-color: rgb(21, 117, 221);
+}

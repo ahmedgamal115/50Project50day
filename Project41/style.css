@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  overflow: hidden;
+  z-index: 2;
+}
+.content{
+  position: relative;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.content label{
+  font-size: 18px;
+}
+.content input{
+  width: 320px;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.content input:focus{
+  outline-color: blue;
+}
+.content button{
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.title{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+.hint{
+  width: 60%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.codes{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.codes .code{
+  width: 100px;
+  padding: 20px;
+  text-align: center;
+  font-size: 85px;
+}
+.btnContiner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.varify{
+  width: 40%;
+  border-radius: 5px;
+}

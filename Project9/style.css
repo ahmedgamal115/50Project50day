@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: steelblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+.sound{
+    width: 150px;
+    background-color: aquamarine;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}

@@ -1,0 +1,122 @@
+:root{
+  --container-background: white;
+  --change-mode-background: black;
+  --change-mode-color: white;
+  --day-color: #6e6e6e;
+  --text-color: black;
+  --arrow-color: black;
+  --secends-arrow: red;
+}
+.dark{
+  --container-background: #2C3333;
+  --change-mode-background: white;
+  --change-mode-color: black;
+  --day-color: #c7c7c7;
+  --text-color: rgb(224, 224, 224);
+  --arrow-color: rgb(255, 255, 255);
+  --secends-arrow: red;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  background-color: var(--container-background);
+  transition: 0.5s ease-in-out;
+}
+.chamgeModeBtn{
+  background-color: var(--change-mode-background);
+  color: var(--change-mode-color);
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.clockShape{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+.arrowHour{
+  width: 5px;
+  height: 60px;
+  background-color: var(--arrow-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(0%,-100%);
+}
+.arrowMinutes{
+  width: 5px;
+  height: 90px;
+  background-color: var(--arrow-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(0%,-100%);
+}
+.arrowSecends{
+  width: 5px;
+  height: 80px;
+  background-color: var(--secends-arrow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(0%,-100%);
+  transition: all 0.5s ease-in;
+}
+.fixedPoint{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid var(--secends-arrow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%,-25%);
+}
+.fixedPoint::after{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--arrow-color);
+  border-radius: 50%;
+}
+
+.time,
+.date,
+.time .number{
+  display: flex;
+  align-items: center;
+}
+.time .number{
+  margin-right: 20px;
+}
+.time .number .hours,
+.time .number  span,
+.time .number .minutes,
+.time .night{
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.date{
+  font-size: 18px;
+  color: var(--day-color);
+}

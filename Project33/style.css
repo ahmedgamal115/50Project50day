@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  overflow: hidden;
+  background-color: #3F3B6C;
+}
+.newNote{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.newNote button{
+  padding: 10px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  font-size: 16px;
+  background-color: #A3C7D6;
+}
+.notes{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+.note{
+  width: 400px;
+  min-height: 250px;
+}
+.note .controller{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+  background-color: #9F73AB;
+  color: aliceblue;
+  user-select: none;
+}
+.note .controller i{
+  cursor: pointer;
+}
+.note .content{
+  width: 100%;
+  min-height: 280px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: aliceblue;
+}
+.note .editContent{
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: aliceblue;
+  resize: none;
+}
+.hidden{
+  display: none;
+}

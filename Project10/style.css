@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: steelblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+    background-color: aliceblue;
+}
+.head{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(110, 110, 110);
+}
+.joke{
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+.btn button{
+    padding: 15px 60px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: steelblue;
+    color: aliceblue;
+    cursor: pointer;
+    -webkit-box-shadow: -4px 6px 27px -3px rgba(0,0,0,0.59);
+    -moz-box-shadow: -4px 6px 27px -3px rgba(0,0,0,0.59);
+    box-shadow: -4px 6px 27px -3px rgba(0,0,0,0.59);
+}
+.btn button:active{
+    transform: scale(0.98)
+}
+
+
+/* The loader container */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #4a4a4a;
+    width: 100%;
+    height: 100%;
+    perspective: 200px;
+    user-select: none;
+  }
+  
+  
+  /* The dot */
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -60px;
+    border-radius: 100px;
+    border: 40px outset #1e3f57;
+    transform-origin: 50% 50%;
+    transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    background-color: transparent;
+    animation: dot1 1000ms cubic-bezier(.49,.06,.43,.85) infinite;
+  }
+  
+  .dot:nth-child(2) {
+    width: 140px;
+    height: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
+    border-width: 30px;
+    border-color: #447891;
+    animation-name: dot2;
+    animation-delay: 75ms;
+    box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+  }
+  
+  .dot:nth-child(3) {
+    width: 160px;
+    height: 160px;
+    margin-top: -80px;
+    margin-left: -80px;
+    border-width: 20px;
+    border-color: #6bb2cd;
+    animation-name: dot3;
+    animation-delay: 150ms;
+    box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+  }
+  
+  @keyframes dot1 {
+    0% {
+      border-color: #1e3f57;
+      transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    }
+  
+    50% {
+      border-color: #1e574f;
+      transform: rotateX(20deg) rotateY(20deg) rotateZ(50deg) translateZ(0px);
+    }
+  
+    100% {
+      border-color: #1e3f57;
+      transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    }
+  }
+  
+  @keyframes dot2 {
+    0% {
+      border-color: #447891;
+      box-shadow: inset 0 0 15px 0 rgba(255, 255, 255, 0.2);
+      transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    }
+  
+    50% {
+      border-color: #449180;
+      box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.8);
+      transform: rotateX(20deg) rotateY(20deg) rotateZ(50deg) translateZ(0px);
+    }
+  
+    100% {
+      border-color: #447891;
+      box-shadow: inset 0 0 15px 0 rgba(255, 255, 255, 0.2);
+      transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    }
+  }
+  
+  @keyframes dot3 {
+    0% {
+      border-color: #6bb2cd;
+      box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+      transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    }
+  
+    50% {
+      border-color: #6bcdb2;
+      box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.8);
+      transform: rotateX(20deg) rotateY(20deg) rotateZ(50deg) translateZ(0px);
+    }
+  
+    100% {
+      border-color: #6bb2cd;
+      box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+      transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-25px);
+    }
+  }

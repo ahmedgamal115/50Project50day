@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(white 50%,rgb(0, 174, 255) 50%);
+}
+.content{
+  width: 30%;
+  height: 80px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  box-shadow: 0px 5px 10px black;
+  user-select: none;
+  transition: width 0.6s linear;
+}
+.content.active{
+  width: 5%;
+}
+.content ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: width 0.6s linear;
+}
+.content.active ul{
+  width: 0%;
+  padding: 0;
+  margin: 0;
+}
+.content ul li{
+  opacity: 1;
+  transform: rotateY(360deg);
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+.content.active ul li{
+  opacity: 0;
+  transform: rotateY(0deg);
+}
+.content ul li a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+.content button{
+  width: 10%;
+  height: 100%;
+  position: relative;
+  border: none;
+  background-color: inherit;
+}
+.content.active button{
+  width: 100%;
+}
+.content button::before,
+.content button::after{
+  content: '/';
+  font-size: 35px;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  left: 42%;
+  cursor: pointer;
+  transition: transform 0.6s linear;
+}
+.content button::after{
+  transform: rotate(120deg) ;
+  /* top: -9px;
+  left: 15px; */
+}
+.content.active button::after{
+  transform: rotate(612deg) translate(-4px,-4px);
+  /* top: -9px;
+  left: 15px; */
+}
+.content button::before{
+  transform: rotate(-158deg);
+  /* top: -9px;
+  left: 15px; */
+}
+.content.active button::before{
+  transform: rotate(-648deg) translateX(-5.5px);
+  /* top: -9px;
+  left: 15px; */
+}
+
+

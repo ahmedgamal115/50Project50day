@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 250px;
+  overflow: hidden;
+  background-color: rgb(151, 100, 0);
+}
+.text{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: aliceblue;
+}
+.contral{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgb(220, 209, 0);
+}
+.Speed{
+  font-size: 18px;
+  font-weight: 600;
+}
+.contral input{
+  width: 80px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.contral input:focus{
+  outline: none;
+}

@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  background-color: aliceblue;
+  overflow: hidden;
+  z-index: 2;
+}
+.content{
+  position: relative;
+  width: 60%;
+  min-height: 350px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 30px;
+  padding: 80px;
+  background-color: rgb(75 103 206);
+  border-radius: 10px;
+}
+.content i{
+  position: absolute;
+  top: 80px;
+  font-size: 40px;
+  color: rgb(209, 209, 209);
+}
+.content i:first-child{
+  left: 25px;
+}
+.content i:nth-child(2){
+  right: 25px;
+}
+.msg{
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: aliceblue;
+}
+.content .msg::before{
+  content: '';
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  animation: 10s change ease-in-out infinite;
+}
+
+@keyframes change {
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+.user{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+}
+.user img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.info{
+  font-size: 20px;
+  color: aliceblue;
+}
+.info .name{
+  margin-bottom: 10px;
+}

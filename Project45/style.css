@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+}
+.navbar{
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+}
+.openIcon{
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.navbar .openIcon .slice{
+  width: 30px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  
+}
+.content{
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  position: relative;
+}
+.container .layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  min-height: 100vh;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  transform: translate(0);
+}
+.container .layerOne{
+  background-color: red;
+  transition-delay: 0.1s;
+  width: 36%;
+  min-width: 350px;
+}
+.container .layerTwo{
+  background-color: black;
+  transition-delay: 0.3s;
+  width: 34%;
+  min-width: 320px;
+}
+.container .layerThree{
+  background-color: aliceblue;
+  transition-delay: 0.5s;
+  width: 32%;
+  min-width: 290px;
+}
+.container .layerOne.hide{
+  transition-delay: 0.5s;
+  transform: translate(-100%);
+}
+.container .layerTwo.hide{
+  transition-delay: 0.3s;
+  transform: translate(-100%);
+}
+.container .layerThree.hide{
+  transition-delay: 0.1s;
+  transform: translate(-100%);
+}
+
+
+.head{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head svg{
+  width: 70px;
+  height: 70px;
+}
+.head .closeIcon{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+.head .closeIcon::before,
+.head .closeIcon::after{
+  content: '';
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: black;
+  transform: rotate(45deg);
+  border-radius: 20px;
+}
+.head .closeIcon::after{
+  transform: rotate(-45deg);
+}
+.list{
+  width: 100%;
+  padding: 20px;
+}
+.list ul{
+  list-style: none;
+}
+.list ul:last-child{
+  padding: 10px 0px 0px 20px;
+}
+.list ul li{
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.list ul li a{
+  text-decoration: none;
+  color: black;
+}

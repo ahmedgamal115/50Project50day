@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(63 45 96);
+}
+.contant{
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.contant::before,
+.contant::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 60px solid transparent;
+  border-bottom-color: #fff;
+  animation: rotateB 2s linear infinite 0.5s;
+}
+.contant::before{
+  transform: rotate(90deg);
+  animation: rotateA 2s linear infinite;
+}
+
+
+@keyframes rotateA {
+  0%,25%{
+    transform: rotate(90deg);
+  }
+  50%,75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(450deg);
+  }
+}
+@keyframes rotateB {
+  0%,25%{
+    transform: rotate(0deg);
+  }
+  50%,75%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

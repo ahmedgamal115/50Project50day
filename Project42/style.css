@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  background-color: black;
+  overflow: hidden;
+  z-index: 2;
+}
+.content{
+  position: relative;
+  width: 300px;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: aliceblue;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.head{
+  width: 100%;
+  height: 22%;
+  padding: 20px;
+  background-color: #3e57db;
+}
+.head .title,
+.head .subtitle{
+  font-size: 20px;
+  font-weight: 600;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+.head .subtitle{
+  font-size: 18px;
+  font-weight: 400;
+}
+.head input{
+  width: 90%;
+  padding: 5px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #223078;
+  color: aliceblue;
+}
+.head input::placeholder{
+  color: aliceblue;
+}
+.head input:focus{
+  outline: none;
+}
+.users{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  min-height: 80px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.loder{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  font-size: 20px;
+}
+.loder.hide{
+  display: none;
+}
+.loder span{
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  animation: 1s ease-in-out infinite motion ;
+  opacity: 0;
+}
+.loder span:nth-child(1){
+  animation-delay: 0.2s;
+}
+.loder span:nth-child(2){
+  animation-delay: 0.5s;
+}
+.loder span:nth-child(3){
+  animation-delay: 0.8s;
+}
+@keyframes motion {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.user{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  border-bottom: 1px solid rgba(192, 191, 191, 0.659);
+  padding: 20px;
+}
+.user.hide{
+  display: none;
+}
+.user:last-child{
+  border-bottom: none;
+}
+.user img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.name{
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.nation{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  font-size: 15px;
+}

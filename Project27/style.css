@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(125, 1, 162);
+}
+.tossContainer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  overflow: hidden;
+}
+.container button{
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.container button:active{
+  transform: scale(0.97);
+}
+.toast{
+  width: 160px;
+  height: 70px;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: aliceblue;
+}
+.toast.sucess{
+  color: green;
+}
+.toast.fail{
+  color: red;
+}
+.toast.info{
+  color: rgb(15, 158, 205);
+}
