@@ -42,11 +42,11 @@ Before you get started, make sure you have the following tools installed on your
 
 Here is the list of projects included in this repository:
 
-* Project 1: Expanding Cards
-* Project 2: Progress Steps
-* Project 3: Rotating Navigation Animation
-* Project 4: Hidden Search Widget
-* Project 5: Blurry Loading
+- Project 1: Expanding Cards
+- Project 2: Progress Steps
+- Project 3: Rotating Navigation Animation
+- Project 4: Hidden Search Widget
+- Project 5: Blurry Loading
 - Project 6: Scroll Animation
 - Project 7: Split Landing Page
 - Project 8: Form Wave
